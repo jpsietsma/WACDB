@@ -1,0 +1,92 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="~/UserControls/UC_Express_Property.ascx.cs" Inherits="UC_Express_Property" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajtk" %>
+<%@ Register src="~/UserControls/UC_GeneralLocation.ascx" tagname="UC_GeneralLocation" tagprefix="uc1" %>
+<%@ Register src="~/UserControls/UC_ControlGroup_PropertyAddressType.ascx" tagname="UC_ControlGroup_PropertyAddressType" tagprefix="uc1" %>
+<%@ Register src="~/UserControls/UC_Express_Global_Insert.ascx" tagname="UC_Express_Global_Insert" tagprefix="uc1" %>
+<div>
+    <asp:Panel ID="pnlExpress_Property" runat="server" CssClass="ModalPopup_Panel" ScrollBars="Vertical">
+        <asp:UpdatePanel ID="upExpress_Property" runat="server" UpdateMode="Conditional">
+            <ContentTemplate>
+                <div style="float:left;"><div><span class="fsM B">Express Property</span><span style="margin-left:20px;"><asp:ImageButton ID="ibGlobal" runat="server" ImageUrl="~/images/arrow_orb_plus_16.png" OnClick="btnExpress_GlobalInsert_Click" ToolTip="Click to Open the Global Insert Express Window" ImageAlign="Bottom"></asp:ImageButton> <asp:LinkButton ID="lbGlobal" runat="server" Text="Global" OnClick="btnExpress_GlobalInsert_Click" ToolTip="Click to Open the Global Insert Express Window" Font-Bold="true"></asp:LinkButton></span></div></div>
+                <div style="float:right;">[<asp:LinkButton ID="lbExpress_Property_Close" runat="server" Text="Close" OnClick="lbExpress_Property_Close_Click"></asp:LinkButton>]</div>
+                <div style="clear:both;"></div>
+                <asp:HiddenField ID="hfPropertyPK" runat="server" />
+                <hr />
+                <asp:Panel ID="pnlGlobalInsert" runat="server" Visible="false">
+                    <div class="NestedDivLevel03" style="margin-bottom:10px;">
+                        <div style="float:left;"><span class="fsM B">Global Insert >> Express</span></div>
+                        <div style="float:right;">[<asp:LinkButton ID="lbGlobal_Insert_Close" runat="server" Text="Close Global Insert" OnClick="lbGlobal_Insert_Close_Click"></asp:LinkButton>]</div>
+                        <div style="clear:both;"></div>
+                        <hr />
+                        <uc1:UC_Express_Global_Insert ID="UC_Express_Global_Insert1" runat="server" />
+                    </div>
+                </asp:Panel>
+                <asp:FormView ID="fvProperty" runat="server" Width="100%" OnModeChanging="fvProperty_ModeChanging" OnItemUpdating="fvProperty_ItemUpdating">
+                    <ItemTemplate>
+                        <div class="NestedDivLevel01">
+                            <div><span class="fsM B">Property View</span> [<asp:LinkButton ID="lbEdit" runat="server" CausesValidation="false" CommandName="Edit" Text="Edit"></asp:LinkButton>] <span class="PK_Created"><%# WACGlobal_Methods.SpecialText_Global_PK_Creator_Modifier(Eval("pk_property"), Eval("created"), Eval("created_by"), Eval("modified"), Eval("modified_by"))%></span></div>
+                            <hr />
+                            <table cellpadding="3">
+                                <tr valign="top"><td class="B taR">Address:</td><td><%# Eval("address") %></td></tr>
+                                <tr valign="top"><td class="B taR">Address2:</td><td><%# WACGlobal_Methods.SpecialText_Global_Address2(Eval("address2"), Eval("fk_address2Type_code"))%></td></tr>
+                                <tr valign="top"><td class="B taR">City:</td><td><%# Eval("city") %></td></tr>
+                                <tr valign="top"><td class="B taR">State:</td><td><%# Eval("state") %></td></tr>
+                                <tr valign="top"><td class="B taR">Zip:</td><td><%# Eval("fk_zipcode") %></td></tr>
+                                <tr valign="top"><td class="B taR">Zip4:</td><td><%# Eval("zip4") %></td></tr>
+                                <tr valign="top"><td class="B taR">NY County:</td><td><%# Eval("list_countyNY.county") %></td></tr>
+                                <tr valign="top"><td class="B taR">NY Township:</td><td><%# Eval("list_townshipNY.township") %></td></tr>
+                                <tr valign="top"><td class="B taR">Basin:</td><td><%# Eval("list_basin.basin") %></td></tr>
+                                <tr valign="top"><td class="B taR">Subbasin:</td><td><%# Eval("list_subbasin.subbasin") %></td></tr>
+                            </table>
+                        </div>
+                    </ItemTemplate>
+                    <EditItemTemplate>
+                        <div class="NestedDivLevel01">
+                            <div><span class="fsM B">Property Edit</span> [<asp:LinkButton ID="lbUpdate" runat="server" CausesValidation="false" CommandName="Update" Text="Update"></asp:LinkButton> | <asp:LinkButton ID="lbCancel" runat="server" CausesValidation="false" CommandName="Cancel" Text="Cancel"></asp:LinkButton>] <span class="PK_Created"><%# WACGlobal_Methods.SpecialText_Global_PK_Creator_Modifier(Eval("pk_property"), Eval("created"), Eval("created_by"), Eval("modified"), Eval("modified_by"))%></span></div>
+                            <hr />
+                            <table cellpadding="3">
+                                <tr valign="top"><td class="B taR">Current Address:</td><td><%# Eval("address") %></td></tr>
+                                <tr valign="top">
+                                    <td class="B taR">Edit Address:</td>
+                                    <td>
+                                        <div class="NestedDivLevel02">
+                                            <uc1:UC_ControlGroup_PropertyAddressType ID="UC_ControlGroup_PropertyAddressType1" runat="server" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr valign="top"><td class="B taR">Address2:</td><td><asp:TextBox ID="tbAddress2" runat="server" Text='<%# Bind("address2") %>'></asp:TextBox> Type: <asp:DropDownList ID="ddlAddress2Type" runat="server"></asp:DropDownList></td></tr>
+                                <tr valign="top"><td class="B taR">State:</td><td><asp:DropDownList ID="ddlState" runat="server" OnSelectedIndexChanged="ddlState_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList></td></tr>
+                                <tr valign="top"><td class="B taR">Zip:</td><td><asp:DropDownList ID="ddlZip" runat="server" OnSelectedIndexChanged="ddlZip_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList></td></tr>
+                                <tr valign="top"><td class="B taR">City:</td><td><asp:Label ID="lblCity" runat="server" Text='<%# Bind("city") %>'></asp:Label></td></tr>
+                                <tr valign="top"><td class="B taR">Zip4:</td><td><asp:TextBox ID="tbZip4" runat="server" Text='<%# Bind("zip4") %>'></asp:TextBox></td></tr>
+                                <tr valign="top"><td class="B taR">General Location:</td><td><uc1:UC_GeneralLocation ID="UC_GeneralLocation_UpdateProperty" runat="server" /></td></tr>
+                            </table>
+                        </div>
+                    </EditItemTemplate>
+                    <%--<InsertItemTemplate>
+                        <div class="NestedDivLevel01">
+                            <div><span class="fsM B">Property Insert</span> [<asp:LinkButton ID="lbInsert" runat="server" CausesValidation="false" CommandName="Insert" Text="Insert"></asp:LinkButton> | <asp:LinkButton ID="lbCancel" runat="server" CausesValidation="false" CommandName="Cancel" Text="Cancel"></asp:LinkButton>]</div>
+                            <div>(Note: Inserting a new Property record will not change the current attached property for the section record you are viewing. The new Property record, however, will be available in the Property Edit/Insert area.)</div>
+                            <hr />
+                            <table cellpadding="3">
+                                <tr valign="top">
+                                    <td class="B taR">Insert Address:</td>
+                                    <td>
+                                        <div class="NestedDivLevel02">
+                                            <uc1:UC_ControlGroup_PropertyAddressType ID="UC_ControlGroup_PropertyAddressType1" runat="server" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr valign="top"><td class="B taR">State:</td><td><asp:DropDownList ID="ddlState" runat="server" OnSelectedIndexChanged="ddlState_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList></td></tr>
+                                <tr valign="top"><td class="B taR">Zip:</td><td><asp:DropDownList ID="ddlZip" runat="server"></asp:DropDownList></td></tr>
+                            </table>
+                        </div>
+                    </InsertItemTemplate>--%>
+                </asp:FormView>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+    </asp:Panel>
+    <asp:LinkButton ID="lbHiddenExpress_Property" runat="server"></asp:LinkButton>
+    <ajtk:ModalPopupExtender ID="mpeExpress_Property" runat="server" TargetControlID="lbHiddenExpress_Property" PopupControlID="pnlExpress_Property" BackgroundCssClass="ModalPopup_BG">
+    </ajtk:ModalPopupExtender>
+</div>

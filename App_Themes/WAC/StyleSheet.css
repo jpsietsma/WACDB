@@ -1,0 +1,229 @@
+﻿html { overflow-y: scroll; }
+body { font-family:Arial; font-size:small; margin:0px 0px 0px 0px; background-color:#EEEEEE; background-image:url(images/body_bg.jpg); }
+a { color:Blue; text-decoration:none; }
+a:hover { text-decoration:underline; }
+a img { border: none; }
+
+#divHeader { width:100%; background-color:#800000; background-image:url(images/title_bg.gif); height:60px; padding: 0px 0px 0px 0px; border-bottom:solid 1px #000000; }
+#divHeaderTest { width:100%; background-color:#800000; background-image:url(images/test_title_bg.gif); height:60px; padding: 0px 0px 0px 0px; border-bottom:solid 1px #000000; }
+#divTabs { width:100%; background-color: #666666; background-image:url(images/nav_bg.gif); height:30px; border-bottom:solid 1px #000000; }
+#divTabSelected { background-color:#990000; height:8px; border-bottom:solid 1px #000000; }
+#divGlobalMessage { 
+    background-color:yellow;
+    color: blue; 
+    height:20px; 
+    text-align:center;
+    border-bottom:solid 1px #000000;
+
+}
+#divFooter {  text-align:center; width: 1270px; margin:0 auto; background-color:#FFFFFF; border-left:solid 1px #999999; border-right:solid 1px #999999; border-bottom:solid 1px #999999; }
+
+#silverlightControlHost { text-align:center; margin:0 auto; background-color:#EEEEEE; border:Solid 1px #CCCCCC; }
+
+.divHeaderClass { margin:0 auto; width: 1270px; height:60px; background-image:url(images/title.gif); background-position:left; background-repeat:no-repeat; }
+.divHeaderTestClass { margin:0 auto; width: 1270px; height:60px; background-image:url(images/test_title.gif); background-position:left; background-repeat:no-repeat; }
+.divTabsClass { margin:0 auto; width: 1270px; }
+.divTab { color:White; float:right; font-size:large; font-weight:bold; margin:1px; padding:3px; }
+.divContentClass { margin:0 auto; width:1270px; padding:0px 0px 0px 0px; background-color:#FFFFFF; border-left:solid 1px #999999; border-right:solid 1px #999999; }
+.divCentered {
+    margin: 0 auto;
+     width: 300px; 
+}
+.spanHeaderLinks { float:right; color:White; text-align:right; }
+.aHeaderLinksBig { font-size:medium; color:White; }
+.aHeaderLinks { color:White; }
+.aTabs { color:White; }
+
+.divAdvisory { border: solid 1px #999999; background-color:#F7F8CC; padding:3px; margin:5px 0px 5px 0px; font-weight:bold; color:Red; filter:alpha(opacity=60) }
+.divExplanation { margin:5px 0px 5px 0px; font-size:small; font-style:italic; }
+
+.divBoxClearPadded { border: solid 1px #CCCCCC; padding:3px; margin: 10px 0px 10px 0px; }
+.divBoxGrayPadded { border: solid 1px #CCCCCC; padding:3px; background-color:#EEEEEE; margin: 10px 0px 10px 0px; }
+.divBoxYellowPadded { border: solid 1px #CCCCCC; padding:3px; background-color:#FFFFC0; margin: 10px 0px 10px 0px; }
+
+.DivBoxOrange { padding:5px; background-color:#FFDDAA; border:solid 1px #888888; }
+.DivBoxYellow { padding:5px; background-color:#FEFEAA; border:solid 1px #888888; }
+.DivBoxPurple { padding:5px; background-color:#D7C8FF; border:solid 1px #888888; }
+.DivBoxLightYellow { padding:5px; background-color:#FEFEEE; border:solid 1px #888888; }
+.DivBoxLightGreen { padding:5px; background-color:#EEFFEE; border:solid 1px #888888; }
+
+.PK_Created { font-size:x-small; font-style:italic; color:#666666; }
+.idLabel 
+{ 
+    float:right;
+    font-size: small; 
+    color:GrayText; 
+}
+	
+.B { font-weight:bold; }
+.N { font-weight:normal; }
+.U { text-decoration:underline; }
+.I { font-style:italic; }
+
+.taR { text-align:right; }
+.taL { text-align:left; }
+.taC { text-align:center; }
+.taJ { text-align:justify; }
+.taT { vertical-align:top; }
+.tp3 { padding: 3px, 0px }
+.tp5 { padding: 5px, 0px }
+.tp10 { padding: 10px, 0px }
+.fsXXS { font-size:xx-small; }
+.fsXS { font-size:x-small; }
+.fsS { font-size:small; }
+.fsM { font-size:medium; }
+.fsL { font-size:large; }
+.fsXL { font-size:x-large; }
+.fsXXL { font-size:xx-large; }
+
+.cGray { color:#666666; }
+.cWhite { color:#FFFFFF; }
+
+.ModalPopup_Panel_XL { background-color:#F0F0F0; width:1275px; height:500px; border:solid 1px #000000; padding:5px; }
+.ModalPopup_Panel_Large { background-color:#F0F0F0; width:1200px; height:700px; border:solid 1px #000000; padding:5px; }
+.ModalPopup_Panel { background-color:#F0F0F0; width: 1200px; height:500px; border:solid 1px #000000; padding:5px; }
+.ModalPopup_Panel_Tall { background-color:#F0F0F0; width: 1200px; height:600px; border:solid 1px #000000; padding:5px; }
+.ModalPopup_Panel_Medium { background-color:#F0F0F0; width: 1200px; height:375px; border:solid 1px #000000; padding:5px; }
+.ModalPopup_Panel_Small { background-color:#F0F0F0; width: 1200px; height:250px; border:solid 1px #000000; padding:5px; }
+.ModalPopup_Panel_Purple { background-color:#D7C8FF; width: 1200px; height:500px; border:solid 1px #000000; padding:5px; }
+.ModalPopup_BG  
+{
+    background-color:black; 
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=40)"; 
+    filter: alpha(opacity=40);
+    opacity: .4; 
+    z-index: 1001;
+}
+table.SeeTable tr td {
+    background-color: whitesmoke;
+    color: purple;
+    border: 1px solid black;
+}
+.Terminal {
+    background-color: black;
+    color: limegreen;
+}
+.Bright {
+    background-color: whitesmoke;
+    color: purple;
+}
+.RTL {
+    direction: rtl;
+}    
+.ModalPopupWait  
+{
+    position: absolute;
+    top: 50%;
+    left:30%;  
+}
+.RadProgressBar {
+    width: 50px;
+    min-width: 50px;
+    max-width: 50px;
+}
+.progressOverlay
+{
+    padding: 5px;
+    z-index: 9999999;
+    height:50px;
+    width: 60px;
+    position: absolute;
+    background-color: blueviolet;
+    -moz-opacity: 0.75;
+    opacity: 0.75;
+    filter: alpha(opacity=75);
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px; /* future proofing */
+    -khtml-border-radius: 10px;
+    font-family: Tahoma;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+}
+.NotificationDIV { background-color:#FFCCCC; border:solid 1px #FF0000; margin:5px; padding:5px; color:#FF0000; font-weight:bold; }
+.NotificationDIVCompleted { background-color:#CCFFCC; border:solid 1px #009900; margin:5px; padding:5px; color:#009900; font-weight:bold; }
+
+.NestedDivLevel00 {
+    padding: 5px;
+    background-color: #EEEEEE;
+    border: solid 1px #888888;
+}
+.NestedDivLevel01 {
+    padding: 5px;
+    background-color: #D3CDCB;
+    border: solid 1px #888888;
+}
+.NestedDivLevel02 {
+    padding: 5px;
+    background-color: #E9E6E4;
+    border: solid 1px #888888;
+}
+.NestedDivLevel02A {
+    padding: 5px;
+    background-color: #D0BEB3;
+    border: solid 1px #888888;
+}
+.NestedDivLevel02T {
+    padding: 5px;
+    margin-top:5px; 
+    margin-bottom: 5px;
+    background-color: none;
+    border: none;
+}
+.NestedDivLevel03 { padding:5px; background-color:#DDEEDD; border:solid 1px #888888; }
+.NestedDivLevel03A { padding:5px; background-color:#CCDDCC; border:solid 1px #888888; }
+.NestedDivLevel04 { padding:5px; background-color:#EEDDDD; border:solid 1px #888888; }
+
+.NestedDivBlue00 { padding:5px; background-color:#CCFFFF; border:solid 1px #888888; }
+.NestedDivBlue01 { padding:5px; background-color:#99CCCC; border:solid 1px #888888; }
+.NestedDivReadOnly { padding:5px; background-color:#FFFFFF; border:solid 1px #888888; color:#888888; font-size:x-small; }
+
+.SearchDivOuter { margin:5px 0px 5px 0px; border:solid 1px #999999; }
+.SearchDivContentContainer { border:solid 3px #CCCCCC; }
+.SearchDivContent { font-weight:bold; padding:0px 0px 3px 0px; background-color:#CCCCCC; }
+.SearchDivInner { border:solid 1px #999999; padding:5px; }
+
+.TabPanelHeadingGreen { background-color:#AAFFAA; padding:1px 2px 1px 2px; }
+.TabPanelHeadingTan { background-color:#EEEEDD; padding:1px 2px 1px 2px; }
+
+.fvTemplate { border:1px solid #999999; padding:5px; background-color:#F9F9F9; }
+
+.LockOff {
+         display: none;
+         visibility: hidden;
+      }
+
+ .LockOn {
+         display: block;
+         visibility: visible;
+         position: absolute;
+         z-index: 999;
+         top: 0px;
+         left: 0px;
+         width: 105%;
+         height: 105%;
+         background-color: #ccc;
+         text-align: center;
+         padding-top: 20%;
+         filter: alpha(opacity=75);
+         opacity: 0.40;
+      } 
+      
+.popupMenu {
+    background-color: green;
+    padding: 5px;
+    border-color: blue;
+    border-style: inset;
+    border-width: 3px;
+}    
+
+div.rwDialog.rwAlertDialog:before
+{
+	content: "";
+}
+
+div.rwDialog.rwConfirmDialog:before
+{
+	content: "";
+}

@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="~/UserControls/UC_Explanation.ascx.cs" Inherits="UC_Explanation" %>
+<div class="divExplanation"><asp:Label ID="lblExplanation" runat="server"></asp:Label></div>

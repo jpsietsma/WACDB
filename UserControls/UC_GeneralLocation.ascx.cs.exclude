@@ -1,0 +1,76 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class UC_GeneralLocation : System.Web.UI.UserControl
+{
+    public bool _BoolShowCountyTownship = true;
+    public bool _BoolShowBasinSubbasin = true;
+    public bool _BoolShowTownship = true;
+    public bool _BoolShowSubbasin = true;
+    public bool _CountyControlsBasin = true;
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!_BoolShowCountyTownship)
+        {
+            _CountyControlsBasin = false;
+            pnlCountyTownship.Visible = false;
+        }
+        else
+        {
+            if (!_BoolShowTownship)
+            {
+                lblTownship.Visible = false;
+                ddlTownship.Visible = false;
+            }
+        }
+        if (!_BoolShowBasinSubbasin) pnlBasinSubbasin.Visible = false;
+        else
+        {
+
+            if (!_BoolShowSubbasin)
+            {
+                lblSubbasin.Visible = false;
+                ddlSubbasin.Visible = false;
+            }
+        }
+    }
+
+    protected void ddlCounty_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (!string.IsNullOrEmpty(ddlCounty.SelectedValue))
+        {
+            WACGlobal_Methods.PopulateControl_DatabaseLists_TownshipNY_DDL(ddlTownship, Convert.ToInt32(ddlCounty.SelectedValue), null);
+            if (_CountyControlsBasin)
+            {
+                WACGlobal_Methods.PopulateControl_DatabaseLists_Basin_DDL(ddlBasin, null, null, null, Convert.ToInt32(ddlCounty.SelectedValue), null, true);
+                if (_BoolShowSubbasin) ddlSubbasin.Items.Clear();
+            }
+        }
+        else
+        {
+            if (_BoolShowTownship) ddlTownship.Items.Clear();
+            if (_CountyControlsBasin)
+            {
+                ddlBasin.Items.Clear();
+                if (_BoolShowSubbasin) ddlSubbasin.Items.Clear();
+            }
+        }
+    }
+
+    protected void ddlBasin_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (_BoolShowSubbasin)
+        {
+            if (!string.IsNullOrEmpty(ddlBasin.SelectedValue))
+            {
+                WACGlobal_Methods.PopulateControl_DatabaseLists_Subbasin_DDL(ddlSubbasin, ddlBasin.SelectedValue, null);
+            }
+            else ddlSubbasin.Items.Clear();
+        }
+    }
+}

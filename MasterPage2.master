@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="~/MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Watershed Agricultural Council - FAME</title>
+    <asp:ContentPlaceHolder id="MasterHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="sm1" runat="server"></asp:ScriptManager>
+    <div>
+        <div id="divHeader">
+            <div class="divHeaderClass">
+                <span class="spanHeaderLinks">
+                </span>
+            </div>
+        </div>
+        <div id="divTabs">
+            <div class="divTabsClass">
+            </div>
+        </div>
+        <div id="divTabSelected">&nbsp;</div>
+        <asp:Panel ID="pnlGlobalMessage" runat="server" Visible="false">
+            <div id="divGlobalMessage" class="fsM B I cWhite"><marquee><asp:Label ID="lblGlobalMessage" runat="server"></asp:Label></marquee></div>
+        </asp:Panel>
+        <asp:ContentPlaceHolder id="MasterMain" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <div id="divFooter"><br /><hr style="width:96%;" />&copy; Copyright 2011-2012 <a href="http://www.nycwatershed.org">Watershed Agricultural Council</a>. All rights reserved.<br /><br /></div>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,3 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="~/UserControls/UC_Express_PageButtons.ascx.cs" Inherits="UC_Express_PageButtons" %>
+<asp:ImageButton ID="ibExpressView" runat="server" CommandArgument='<%# Eval(GetFieldsBySection()) %>' OnClick="ibExpressView_Click" ImageAlign="Bottom"></asp:ImageButton>
+<asp:ImageButton ID="ibExpressNav" runat="server" CommandArgument='<%# Eval(GetFieldsBySection()) %>' OnClick="ibExpressNav_Click" ImageAlign="Bottom"></asp:ImageButton>

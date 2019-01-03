@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 17.375" name="DataClasses1">
+  <DataContextMoniker Name="/DataClasses1DataContext" />
+  <nestedChildShapes>
+    <classShape Id="f65c2c4b-6d77-4c6f-a4f1-de662975ddd2" absoluteBounds="3, 2, 2, 14.6550927734375">
+      <DataClassMoniker Name="/DataClasses1DataContext/bmp_ag" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f1c3b592-fb5d-45e5-a92a-8ac89fb44363" absoluteBounds="3.015, 2.46, 1.9700000000000002, 14.0950927734375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.46 : 16.6550927734375); (3.46 : 16.9050927734375); (3.80615384615385 : 16.9050927734375); (3.80615384615385 : 16.6550927734375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClasses1DataContext/bmp_ag/bmp_ag_bmp_ag" />
+      <nodes>
+        <classShapeMoniker Id="f65c2c4b-6d77-4c6f-a4f1-de662975ddd2" />
+        <classShapeMoniker Id="f65c2c4b-6d77-4c6f-a4f1-de662975ddd2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.70923076923077 : 2); (3.70923076923077 : 1.75); (4.30461538461539 : 1.75); (4.30461538461539 : 2)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClasses1DataContext/bmp_ag/bmp_ag_bmp_ag1" />
+      <nodes>
+        <classShapeMoniker Id="f65c2c4b-6d77-4c6f-a4f1-de662975ddd2" />
+        <classShapeMoniker Id="f65c2c4b-6d77-4c6f-a4f1-de662975ddd2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3 : 6.99249293870193); (2.75 : 6.99249293870193); (2.75 : 11.7737928560697); (3 : 11.7737928560697)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClasses1DataContext/bmp_ag/bmp_ag_bmp_ag2" />
+      <nodes>
+        <classShapeMoniker Id="f65c2c4b-6d77-4c6f-a4f1-de662975ddd2" />
+        <classShapeMoniker Id="f65c2c4b-6d77-4c6f-a4f1-de662975ddd2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5 : 6.99249293870193); (5.25 : 6.99249293870193); (5.25 : 11.7737928560697); (5 : 11.7737928560697)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClasses1DataContext/bmp_ag/bmp_ag_bmp_ag3" />
+      <nodes>
+        <classShapeMoniker Id="f65c2c4b-6d77-4c6f-a4f1-de662975ddd2" />
+        <classShapeMoniker Id="f65c2c4b-6d77-4c6f-a4f1-de662975ddd2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.15230769230769 : 16.6550927734375); (4.15230769230769 : 16.9050927734375); (4.49846153846154 : 16.9050927734375); (4.49846153846154 : 16.6550927734375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClasses1DataContext/bmp_ag/bmp_ag_bmp_ag4" />
+      <nodes>
+        <classShapeMoniker Id="f65c2c4b-6d77-4c6f-a4f1-de662975ddd2" />
+        <classShapeMoniker Id="f65c2c4b-6d77-4c6f-a4f1-de662975ddd2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="196f46c4-71cb-4b5e-a030-cd269cff30c6" absoluteBounds="7.75, 2.125, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataClasses1DataContext/list_BMPCode" />
+      <nestedChildShapes>
+        <elementListCompartment Id="302779c0-5c12-4340-ab46-9b4ebdc056bb" absoluteBounds="7.765, 2.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.75 : 2.81814697265625); (5 : 2.81814697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClasses1DataContext/list_BMPCode/list_BMPCode_bmp_ag" />
+      <nodes>
+        <classShapeMoniker Id="196f46c4-71cb-4b5e-a030-cd269cff30c6" />
+        <classShapeMoniker Id="f65c2c4b-6d77-4c6f-a4f1-de662975ddd2" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

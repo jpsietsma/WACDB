@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="_UpgradeWizard_Files\UpgradeWizardLog.xslt"?>
+<log>
+  <event action="Analyze" type="Success" name="Assembly References" path="E:\Projects\WACDB\.vs\config\applicationhost.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="E:\Projects\WACDB\.vs\config\applicationhost.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="E:\Projects\WACDB\.vs\config\applicationhost.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="E:\Projects\WACDB\.vs\config\applicationhost.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="E:\Projects\WACDB\.vs\config\applicationhost.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="E:\Projects\WACDB\.vs\config\applicationhost.config" />
+  <event action="Analyze" type="Success" name="applicationhost.config" path="E:\Projects\WACDB\.vs\config\applicationhost.config" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\AG\WACAG_AgPageContents.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\AG\WACAG_AgPageContents.ascx" />
+  <event action="Analyze" type="Success" name="WACAG_AgPageContents.ascx" path="E:\Projects\WACDB\AG\WACAG_AgPageContents.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\AG\WACAG_FarmBusinessForm.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\AG\WACAG_FarmBusinessForm.ascx" />
+  <event action="Analyze" type="Success" name="WACAG_FarmBusinessForm.ascx" path="E:\Projects\WACDB\AG\WACAG_FarmBusinessForm.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\AG\WACAG_QMACheckbox.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\AG\WACAG_QMACheckbox.ascx" />
+  <event action="Analyze" type="Success" name="WACAG_QMACheckbox.ascx" path="E:\Projects\WACDB\AG\WACAG_QMACheckbox.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\AG\WACAG_SupplementalAgreementForm.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\AG\WACAG_SupplementalAgreementForm.ascx" />
+  <event action="Analyze" type="Success" name="WACAG_SupplementalAgreementForm.ascx" path="E:\Projects\WACDB\AG\WACAG_SupplementalAgreementForm.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\AG\WACAG_SupplementalAgreementPageContents.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\AG\WACAG_SupplementalAgreementPageContents.ascx" />
+  <event action="Analyze" type="Success" name="WACAG_SupplementalAgreementPageContents.ascx" path="E:\Projects\WACDB\AG\WACAG_SupplementalAgreementPageContents.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\AG\WACAgriculture.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\AG\WACAgriculture.aspx" />
+  <event action="Analyze" type="Success" name="WACAgriculture.aspx" path="E:\Projects\WACDB\AG\WACAgriculture.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\AG\WACAgriculture_BMPPlanning.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\AG\WACAgriculture_BMPPlanning.aspx" />
+  <event action="Analyze" type="Success" name="WACAgriculture_BMPPlanning.aspx" path="E:\Projects\WACDB\AG\WACAgriculture_BMPPlanning.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\AG\WACAgriculture_BMPWorkloads.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\AG\WACAgriculture_BMPWorkloads.aspx" />
+  <event action="Analyze" type="Success" name="WACAgriculture_BMPWorkloads.aspx" path="E:\Projects\WACDB\AG\WACAgriculture_BMPWorkloads.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\AG\WACAgriculture_SupplementalAgreements.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\AG\WACAgriculture_SupplementalAgreements.aspx" />
+  <event action="Analyze" type="Success" name="WACAgriculture_SupplementalAgreements.aspx" path="E:\Projects\WACDB\AG\WACAgriculture_SupplementalAgreements.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\AG\WACAgriculture_WorkloadFunding.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\AG\WACAgriculture_WorkloadFunding.aspx" />
+  <event action="Analyze" type="Success" name="WACAgriculture_WorkloadFunding.aspx" path="E:\Projects\WACDB\AG\WACAgriculture_WorkloadFunding.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\AG_BMP\WACAG_BMPSupplementalAgreement.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\AG_BMP\WACAG_BMPSupplementalAgreement.ascx" />
+  <event action="Analyze" type="Success" name="WACAG_BMPSupplementalAgreement.ascx" path="E:\Projects\WACDB\AG_BMP\WACAG_BMPSupplementalAgreement.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\AG_BMPWorkload\WACAG_BMPWorkload.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\AG_BMPWorkload\WACAG_BMPWorkload.aspx" />
+  <event action="Analyze" type="Success" name="WACAG_BMPWorkload.aspx" path="E:\Projects\WACDB\AG_BMPWorkload\WACAG_BMPWorkload.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\AG_BMPWorkload\WACAG_BMPWorkloadDetails.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\AG_BMPWorkload\WACAG_BMPWorkloadDetails.ascx" />
+  <event action="Analyze" type="Success" name="WACAG_BMPWorkloadDetails.ascx" path="E:\Projects\WACDB\AG_BMPWorkload\WACAG_BMPWorkloadDetails.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\AG_BMPWorkload\WACAG_BMPWorkloadFilters.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\AG_BMPWorkload\WACAG_BMPWorkloadFilters.ascx" />
+  <event action="Analyze" type="Success" name="WACAG_BMPWorkloadFilters.ascx" path="E:\Projects\WACDB\AG_BMPWorkload\WACAG_BMPWorkloadFilters.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\AG_BMPWorkload\WACAG_BMPWorkloadTab.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\AG_BMPWorkload\WACAG_BMPWorkloadTab.ascx" />
+  <event action="Analyze" type="Success" name="WACAG_BMPWorkloadTab.ascx" path="E:\Projects\WACDB\AG_BMPWorkload\WACAG_BMPWorkloadTab.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\AG_WFP3\WACAG_WFP3.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\AG_WFP3\WACAG_WFP3.aspx" />
+  <event action="Analyze" type="Success" name="WACAG_WFP3.aspx" path="E:\Projects\WACDB\AG_WFP3\WACAG_WFP3.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\AG_WFP3\WACAG_WFP3_Grid.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\AG_WFP3\WACAG_WFP3_Grid.ascx" />
+  <event action="Analyze" type="Success" name="WACAG_WFP3_Grid.ascx" path="E:\Projects\WACDB\AG_WFP3\WACAG_WFP3_Grid.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\AG_WFP3\WACAG_Wfp3Bid.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\AG_WFP3\WACAG_Wfp3Bid.ascx" />
+  <event action="Analyze" type="Success" name="WACAG_Wfp3Bid.ascx" path="E:\Projects\WACDB\AG_WFP3\WACAG_Wfp3Bid.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\AG_WFP3\WACAG_Wfp3Bmp.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\AG_WFP3\WACAG_Wfp3Bmp.ascx" />
+  <event action="Analyze" type="Success" name="WACAG_Wfp3Bmp.ascx" path="E:\Projects\WACDB\AG_WFP3\WACAG_Wfp3Bmp.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\AG_WFP3\WACAG_Wfp3Encumbrance.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\AG_WFP3\WACAG_Wfp3Encumbrance.ascx" />
+  <event action="Analyze" type="Success" name="WACAG_Wfp3Encumbrance.ascx" path="E:\Projects\WACDB\AG_WFP3\WACAG_Wfp3Encumbrance.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\AG_WFP3\WACAG_Wfp3Invoice.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\AG_WFP3\WACAG_Wfp3Invoice.ascx" />
+  <event action="Analyze" type="Success" name="WACAG_Wfp3Invoice.ascx" path="E:\Projects\WACDB\AG_WFP3\WACAG_Wfp3Invoice.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\AG_WFP3\WACAG_Wfp3Modification.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\AG_WFP3\WACAG_Wfp3Modification.ascx" />
+  <event action="Analyze" type="Success" name="WACAG_Wfp3Modification.ascx" path="E:\Projects\WACDB\AG_WFP3\WACAG_Wfp3Modification.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\AG_WFP3\WACAG_Wfp3Payment.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\AG_WFP3\WACAG_Wfp3Payment.ascx" />
+  <event action="Analyze" type="Success" name="WACAG_Wfp3Payment.ascx" path="E:\Projects\WACDB\AG_WFP3\WACAG_Wfp3Payment.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\AG_WFP3\WACAG_Wfp3PaymentBMP.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\AG_WFP3\WACAG_Wfp3PaymentBMP.ascx" />
+  <event action="Analyze" type="Success" name="WACAG_Wfp3PaymentBMP.ascx" path="E:\Projects\WACDB\AG_WFP3\WACAG_Wfp3PaymentBMP.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\AG_WFP3\WACAG_Wfp3Specification.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\AG_WFP3\WACAG_Wfp3Specification.ascx" />
+  <event action="Analyze" type="Success" name="WACAG_Wfp3Specification.ascx" path="E:\Projects\WACDB\AG_WFP3\WACAG_Wfp3Specification.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\AG_WFP3\WACAG_Wfp3Tech.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\AG_WFP3\WACAG_Wfp3Tech.ascx" />
+  <event action="Analyze" type="Success" name="WACAG_Wfp3Tech.ascx" path="E:\Projects\WACDB\AG_WFP3\WACAG_Wfp3Tech.ascx" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Binary References" path="E:\Projects\WACDB\Bin\" />
+  <event action="Analyze" type="Success" name="Assembly References" path="E:\Projects\WACDB\ConsoleSandbox\App.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="E:\Projects\WACDB\ConsoleSandbox\App.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="E:\Projects\WACDB\ConsoleSandbox\App.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="E:\Projects\WACDB\ConsoleSandbox\App.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="E:\Projects\WACDB\ConsoleSandbox\App.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="E:\Projects\WACDB\ConsoleSandbox\App.config" />
+  <event action="Analyze" type="Success" name="App.config" path="E:\Projects\WACDB\ConsoleSandbox\App.config" />
+  <event action="Analyze" type="Success" name="Binary References" path="E:\Projects\WACDB\ConsoleSandbox\bin\" />
+  <event action="Analyze" type="Success" name="Assembly References" path="E:\Projects\WACDB\ConsoleSandbox\bin\Debug\ConsoleSandbox.exe.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="E:\Projects\WACDB\ConsoleSandbox\bin\Debug\ConsoleSandbox.exe.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="E:\Projects\WACDB\ConsoleSandbox\bin\Debug\ConsoleSandbox.exe.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="E:\Projects\WACDB\ConsoleSandbox\bin\Debug\ConsoleSandbox.exe.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="E:\Projects\WACDB\ConsoleSandbox\bin\Debug\ConsoleSandbox.exe.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="E:\Projects\WACDB\ConsoleSandbox\bin\Debug\ConsoleSandbox.exe.config" />
+  <event action="Analyze" type="Success" name="ConsoleSandbox.exe.config" path="E:\Projects\WACDB\ConsoleSandbox\bin\Debug\ConsoleSandbox.exe.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="E:\Projects\WACDB\ConsoleSandbox\bin\Debug\ConsoleSandbox.vshost.exe.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="E:\Projects\WACDB\ConsoleSandbox\bin\Debug\ConsoleSandbox.vshost.exe.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="E:\Projects\WACDB\ConsoleSandbox\bin\Debug\ConsoleSandbox.vshost.exe.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="E:\Projects\WACDB\ConsoleSandbox\bin\Debug\ConsoleSandbox.vshost.exe.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="E:\Projects\WACDB\ConsoleSandbox\bin\Debug\ConsoleSandbox.vshost.exe.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="E:\Projects\WACDB\ConsoleSandbox\bin\Debug\ConsoleSandbox.vshost.exe.config" />
+  <event action="Analyze" type="Success" name="ConsoleSandbox.vshost.exe.config" path="E:\Projects\WACDB\ConsoleSandbox\bin\Debug\ConsoleSandbox.vshost.exe.config" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\CustomControls\AjaxCalendar.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\CustomControls\AjaxCalendar.ascx" />
+  <event action="Analyze" type="Success" name="AjaxCalendar.ascx" path="E:\Projects\WACDB\CustomControls\AjaxCalendar.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Default.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Default.aspx" />
+  <event action="Analyze" type="Success" name="Default.aspx" path="E:\Projects\WACDB\Default.aspx" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\HR\HRMasterPage.master" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\HR\HRMasterPage.master" />
+  <event action="Analyze" type="Success" name="HRMasterPage.master" path="E:\Projects\WACDB\HR\HRMasterPage.master" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\HR\WACHR.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\HR\WACHR.aspx" />
+  <event action="Analyze" type="Success" name="WACHR.aspx" path="E:\Projects\WACDB\HR\WACHR.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\HR\WACHR_Activity.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\HR\WACHR_Activity.ascx" />
+  <event action="Analyze" type="Success" name="WACHR_Activity.ascx" path="E:\Projects\WACDB\HR\WACHR_Activity.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\HR\WACHR_EmployeeDetail.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\HR\WACHR_EmployeeDetail.ascx" />
+  <event action="Analyze" type="Success" name="WACHR_EmployeeDetail.ascx" path="E:\Projects\WACDB\HR\WACHR_EmployeeDetail.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\HR\WACHR_EmployeeTab.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\HR\WACHR_EmployeeTab.ascx" />
+  <event action="Analyze" type="Success" name="WACHR_EmployeeTab.ascx" path="E:\Projects\WACDB\HR\WACHR_EmployeeTab.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\HR\WACHR_Evaluation.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\HR\WACHR_Evaluation.ascx" />
+  <event action="Analyze" type="Success" name="WACHR_Evaluation.ascx" path="E:\Projects\WACDB\HR\WACHR_Evaluation.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\HR\WACHR_Filters.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\HR\WACHR_Filters.ascx" />
+  <event action="Analyze" type="Success" name="WACHR_Filters.ascx" path="E:\Projects\WACDB\HR\WACHR_Filters.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\HR\WACHR_Note.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\HR\WACHR_Note.ascx" />
+  <event action="Analyze" type="Success" name="WACHR_Note.ascx" path="E:\Projects\WACDB\HR\WACHR_Note.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\HR\WACHR_Phone.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\HR\WACHR_Phone.ascx" />
+  <event action="Analyze" type="Success" name="WACHR_Phone.ascx" path="E:\Projects\WACDB\HR\WACHR_Phone.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\HR\WACHR_Position.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\HR\WACHR_Position.ascx" />
+  <event action="Analyze" type="Success" name="WACHR_Position.ascx" path="E:\Projects\WACDB\HR\WACHR_Position.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\HR\WACHR_Training.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\HR\WACHR_Training.ascx" />
+  <event action="Analyze" type="Success" name="WACHR_Training.ascx" path="E:\Projects\WACDB\HR\WACHR_Training.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Login.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Login.aspx" />
+  <event action="Analyze" type="Success" name="Login.aspx" path="E:\Projects\WACDB\Login.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Map.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Map.aspx" />
+  <event action="Analyze" type="Success" name="Map.aspx" path="E:\Projects\WACDB\Map.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\MasterPage.master" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\MasterPage.master" />
+  <event action="Analyze" type="Success" name="MasterPage.master" path="E:\Projects\WACDB\MasterPage.master" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\MasterPage2.master" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\MasterPage2.master" />
+  <event action="Analyze" type="Success" name="MasterPage2.master" path="E:\Projects\WACDB\MasterPage2.master" />
+  <event action="Analyze" type="Success" name="Assembly References" path="E:\Projects\WACDB\packages\repositories.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="E:\Projects\WACDB\packages\repositories.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="E:\Projects\WACDB\packages\repositories.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="E:\Projects\WACDB\packages\repositories.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="E:\Projects\WACDB\packages\repositories.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="E:\Projects\WACDB\packages\repositories.config" />
+  <event action="Analyze" type="Success" name="repositories.config" path="E:\Projects\WACDB\packages\repositories.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="E:\Projects\WACDB\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="E:\Projects\WACDB\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="E:\Projects\WACDB\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="E:\Projects\WACDB\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="E:\Projects\WACDB\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="E:\Projects\WACDB\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="E:\Projects\WACDB\packages.config" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Participant\WACPT_ContactInfoList.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Participant\WACPT_ContactInfoList.ascx" />
+  <event action="Analyze" type="Success" name="WACPT_ContactInfoList.ascx" path="E:\Projects\WACDB\Participant\WACPT_ContactInfoList.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Participant\WACPT_ContactInfoPage.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Participant\WACPT_ContactInfoPage.aspx" />
+  <event action="Analyze" type="Success" name="WACPT_ContactInfoPage.aspx" path="E:\Projects\WACDB\Participant\WACPT_ContactInfoPage.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Participant\WACPT_Organizations.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Participant\WACPT_Organizations.aspx" />
+  <event action="Analyze" type="Success" name="WACPT_Organizations.aspx" path="E:\Projects\WACDB\Participant\WACPT_Organizations.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Participant\WACPT_ParticipantAlphaPicker.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Participant\WACPT_ParticipantAlphaPicker.ascx" />
+  <event action="Analyze" type="Success" name="WACPT_ParticipantAlphaPicker.ascx" path="E:\Projects\WACDB\Participant\WACPT_ParticipantAlphaPicker.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Participant\WACPT_ParticipantCreate.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Participant\WACPT_ParticipantCreate.ascx" />
+  <event action="Analyze" type="Success" name="WACPT_ParticipantCreate.ascx" path="E:\Projects\WACDB\Participant\WACPT_ParticipantCreate.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Participant\WACPT_ParticipantListSearch.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Participant\WACPT_ParticipantListSearch.ascx" />
+  <event action="Analyze" type="Success" name="WACPT_ParticipantListSearch.ascx" path="E:\Projects\WACDB\Participant\WACPT_ParticipantListSearch.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Participant\WACPT_Participants.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Participant\WACPT_Participants.aspx" />
+  <event action="Analyze" type="Success" name="WACPT_Participants.aspx" path="E:\Projects\WACDB\Participant\WACPT_Participants.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Property\UC_Express_Property.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Property\UC_Express_Property.ascx" />
+  <event action="Analyze" type="Success" name="UC_Express_Property.ascx" path="E:\Projects\WACDB\Property\UC_Express_Property.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Property\WACPR_Property.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Property\WACPR_Property.aspx" />
+  <event action="Analyze" type="Success" name="WACPR_Property.aspx" path="E:\Projects\WACDB\Property\WACPR_Property.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Property\WACPR_TaxParcelFilter.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Property\WACPR_TaxParcelFilter.ascx" />
+  <event action="Analyze" type="Success" name="WACPR_TaxParcelFilter.ascx" path="E:\Projects\WACDB\Property\WACPR_TaxParcelFilter.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Property\WACPR_TaxParcelForm.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Property\WACPR_TaxParcelForm.ascx" />
+  <event action="Analyze" type="Success" name="WACPR_TaxParcelForm.ascx" path="E:\Projects\WACDB\Property\WACPR_TaxParcelForm.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Property\WACPR_TaxParcelGrid.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Property\WACPR_TaxParcelGrid.ascx" />
+  <event action="Analyze" type="Success" name="WACPR_TaxParcelGrid.ascx" path="E:\Projects\WACDB\Property\WACPR_TaxParcelGrid.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Property\WACPR_TaxParcelOwnerContainer.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Property\WACPR_TaxParcelOwnerContainer.ascx" />
+  <event action="Analyze" type="Success" name="WACPR_TaxParcelOwnerContainer.ascx" path="E:\Projects\WACDB\Property\WACPR_TaxParcelOwnerContainer.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Property\WACPR_TaxParcelOwnerForm.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Property\WACPR_TaxParcelOwnerForm.ascx" />
+  <event action="Analyze" type="Success" name="WACPR_TaxParcelOwnerForm.ascx" path="E:\Projects\WACDB\Property\WACPR_TaxParcelOwnerForm.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Property\WACPR_TaxParcelOwnerGrid.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Property\WACPR_TaxParcelOwnerGrid.ascx" />
+  <event action="Analyze" type="Success" name="WACPR_TaxParcelOwnerGrid.ascx" path="E:\Projects\WACDB\Property\WACPR_TaxParcelOwnerGrid.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Property\WACPR_TaxParcelPage.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Property\WACPR_TaxParcelPage.aspx" />
+  <event action="Analyze" type="Success" name="WACPR_TaxParcelPage.aspx" path="E:\Projects\WACDB\Property\WACPR_TaxParcelPage.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Property\WACPR_TaxParcelPageContents.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Property\WACPR_TaxParcelPageContents.ascx" />
+  <event action="Analyze" type="Success" name="WACPR_TaxParcelPageContents.ascx" path="E:\Projects\WACDB\Property\WACPR_TaxParcelPageContents.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Property\WACPR_TaxParcelPicker.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Property\WACPR_TaxParcelPicker.ascx" />
+  <event action="Analyze" type="Success" name="WACPR_TaxParcelPicker.ascx" path="E:\Projects\WACDB\Property\WACPR_TaxParcelPicker.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Property\WACPR_TaxParcelPrintKeySearch.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Property\WACPR_TaxParcelPrintKeySearch.ascx" />
+  <event action="Analyze" type="Success" name="WACPR_TaxParcelPrintKeySearch.ascx" path="E:\Projects\WACDB\Property\WACPR_TaxParcelPrintKeySearch.ascx" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Binary References" path="E:\Projects\WACDB\TelerikWebApp\Bin\" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\TelerikWebApp\Default.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\TelerikWebApp\Default.aspx" />
+  <event action="Analyze" type="Success" name="Default.aspx" path="E:\Projects\WACDB\TelerikWebApp\Default.aspx" />
+  <event action="Analyze" type="Success" name="Assembly References" path="E:\Projects\WACDB\TelerikWebApp\web.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="E:\Projects\WACDB\TelerikWebApp\web.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="E:\Projects\WACDB\TelerikWebApp\web.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="E:\Projects\WACDB\TelerikWebApp\web.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="E:\Projects\WACDB\TelerikWebApp\web.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="E:\Projects\WACDB\TelerikWebApp\web.config" />
+  <event action="Analyze" type="Success" name="web.config" path="E:\Projects\WACDB\TelerikWebApp\web.config" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\UserControls\UC_Advisory.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\UserControls\UC_Advisory.ascx" />
+  <event action="Analyze" type="Success" name="UC_Advisory.ascx" path="E:\Projects\WACDB\UserControls\UC_Advisory.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\UserControls\UC_Communication_EditInsert.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\UserControls\UC_Communication_EditInsert.ascx" />
+  <event action="Analyze" type="Success" name="UC_Communication_EditInsert.ascx" path="E:\Projects\WACDB\UserControls\UC_Communication_EditInsert.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\UserControls\UC_ControlGroup_ParticipantCommunication.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\UserControls\UC_ControlGroup_ParticipantCommunication.ascx" />
+  <event action="Analyze" type="Success" name="UC_ControlGroup_ParticipantCommunication.ascx" path="E:\Projects\WACDB\UserControls\UC_ControlGroup_ParticipantCommunication.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\UserControls\UC_ControlGroup_ParticipantProperty.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\UserControls\UC_ControlGroup_ParticipantProperty.ascx" />
+  <event action="Analyze" type="Success" name="UC_ControlGroup_ParticipantProperty.ascx" path="E:\Projects\WACDB\UserControls\UC_ControlGroup_ParticipantProperty.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\UserControls\UC_ControlGroup_ParticipantType.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\UserControls\UC_ControlGroup_ParticipantType.ascx" />
+  <event action="Analyze" type="Success" name="UC_ControlGroup_ParticipantType.ascx" path="E:\Projects\WACDB\UserControls\UC_ControlGroup_ParticipantType.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\UserControls\UC_ControlGroup_PropertyAddressType.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\UserControls\UC_ControlGroup_PropertyAddressType.ascx" />
+  <event action="Analyze" type="Success" name="UC_ControlGroup_PropertyAddressType.ascx" path="E:\Projects\WACDB\UserControls\UC_ControlGroup_PropertyAddressType.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\UserControls\UC_ControlGroup_TaxParcel.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\UserControls\UC_ControlGroup_TaxParcel.ascx" />
+  <event action="Analyze" type="Success" name="UC_ControlGroup_TaxParcel.ascx" path="E:\Projects\WACDB\UserControls\UC_ControlGroup_TaxParcel.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\UserControls\UC_DocumentArchive.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\UserControls\UC_DocumentArchive.ascx" />
+  <event action="Analyze" type="Success" name="UC_DocumentArchive.ascx" path="E:\Projects\WACDB\UserControls\UC_DocumentArchive.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\UserControls\UC_DocumentArchive_orig.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\UserControls\UC_DocumentArchive_orig.ascx" />
+  <event action="Analyze" type="Success" name="UC_DocumentArchive_orig.ascx" path="E:\Projects\WACDB\UserControls\UC_DocumentArchive_orig.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\UserControls\UC_DropDownListByAlphabet.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\UserControls\UC_DropDownListByAlphabet.ascx" />
+  <event action="Analyze" type="Success" name="UC_DropDownListByAlphabet.ascx" path="E:\Projects\WACDB\UserControls\UC_DropDownListByAlphabet.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\UserControls\UC_EditCalendar.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\UserControls\UC_EditCalendar.ascx" />
+  <event action="Analyze" type="Success" name="UC_EditCalendar.ascx" path="E:\Projects\WACDB\UserControls\UC_EditCalendar.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\UserControls\UC_Explanation.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\UserControls\UC_Explanation.ascx" />
+  <event action="Analyze" type="Success" name="UC_Explanation.ascx" path="E:\Projects\WACDB\UserControls\UC_Explanation.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\UserControls\UC_Express_Global_Insert.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\UserControls\UC_Express_Global_Insert.ascx" />
+  <event action="Analyze" type="Success" name="UC_Express_Global_Insert.ascx" path="E:\Projects\WACDB\UserControls\UC_Express_Global_Insert.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\UserControls\UC_Express_Organization.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\UserControls\UC_Express_Organization.ascx" />
+  <event action="Analyze" type="Success" name="UC_Express_Organization.ascx" path="E:\Projects\WACDB\UserControls\UC_Express_Organization.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\UserControls\UC_Express_PageButtons.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\UserControls\UC_Express_PageButtons.ascx" />
+  <event action="Analyze" type="Success" name="UC_Express_PageButtons.ascx" path="E:\Projects\WACDB\UserControls\UC_Express_PageButtons.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\UserControls\UC_Express_PageButtonsInsert.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\UserControls\UC_Express_PageButtonsInsert.ascx" />
+  <event action="Analyze" type="Success" name="UC_Express_PageButtonsInsert.ascx" path="E:\Projects\WACDB\UserControls\UC_Express_PageButtonsInsert.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\UserControls\UC_Express_Participant.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\UserControls\UC_Express_Participant.ascx" />
+  <event action="Analyze" type="Success" name="UC_Express_Participant.ascx" path="E:\Projects\WACDB\UserControls\UC_Express_Participant.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\UserControls\UC_Global_Insert.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\UserControls\UC_Global_Insert.ascx" />
+  <event action="Analyze" type="Success" name="UC_Global_Insert.ascx" path="E:\Projects\WACDB\UserControls\UC_Global_Insert.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\UserControls\UC_ParticipantAlphaPicker.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\UserControls\UC_ParticipantAlphaPicker.ascx" />
+  <event action="Analyze" type="Success" name="UC_ParticipantAlphaPicker.ascx" path="E:\Projects\WACDB\UserControls\UC_ParticipantAlphaPicker.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\UserControls\UC_Property_EditInsert.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\UserControls\UC_Property_EditInsert.ascx" />
+  <event action="Analyze" type="Success" name="UC_Property_EditInsert.ascx" path="E:\Projects\WACDB\UserControls\UC_Property_EditInsert.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\UserControls\UC_SearchByAddress.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\UserControls\UC_SearchByAddress.ascx" />
+  <event action="Analyze" type="Success" name="UC_SearchByAddress.ascx" path="E:\Projects\WACDB\UserControls\UC_SearchByAddress.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Utility\TestPage.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Utility\TestPage.aspx" />
+  <event action="Analyze" type="Success" name="TestPage.aspx" path="E:\Projects\WACDB\Utility\TestPage.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Utility\WACUT_AddNewItem.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Utility\WACUT_AddNewItem.ascx" />
+  <event action="Analyze" type="Success" name="WACUT_AddNewItem.ascx" path="E:\Projects\WACDB\Utility\WACUT_AddNewItem.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Utility\WACUT_Associations.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Utility\WACUT_Associations.ascx" />
+  <event action="Analyze" type="Success" name="WACUT_Associations.ascx" path="E:\Projects\WACDB\Utility\WACUT_Associations.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Utility\WACUT_AttachedDocumentViewer.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Utility\WACUT_AttachedDocumentViewer.ascx" />
+  <event action="Analyze" type="Success" name="WACUT_AttachedDocumentViewer.ascx" path="E:\Projects\WACDB\Utility\WACUT_AttachedDocumentViewer.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Utility\WACUT_ExpressNavigate.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Utility\WACUT_ExpressNavigate.ascx" />
+  <event action="Analyze" type="Success" name="WACUT_ExpressNavigate.ascx" path="E:\Projects\WACDB\Utility\WACUT_ExpressNavigate.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Utility\WACUT_TestPageContents.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Utility\WACUT_TestPageContents.ascx" />
+  <event action="Analyze" type="Success" name="WACUT_TestPageContents.ascx" path="E:\Projects\WACDB\Utility\WACUT_TestPageContents.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\Utility\WACUT_YesNoChooser.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\Utility\WACUT_YesNoChooser.ascx" />
+  <event action="Analyze" type="Success" name="WACUT_YesNoChooser.ascx" path="E:\Projects\WACDB\Utility\WACUT_YesNoChooser.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\WACCommunications.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\WACCommunications.aspx" />
+  <event action="Analyze" type="Success" name="WACCommunications.aspx" path="E:\Projects\WACDB\WACCommunications.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\WACContact.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\WACContact.aspx" />
+  <event action="Analyze" type="Success" name="WACContact.aspx" path="E:\Projects\WACDB\WACContact.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\WACDocumentUpload.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\WACDocumentUpload.aspx" />
+  <event action="Analyze" type="Success" name="WACDocumentUpload.aspx" path="E:\Projects\WACDB\WACDocumentUpload.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\WACExpressAdd_Participant.ascx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\WACExpressAdd_Participant.ascx" />
+  <event action="Analyze" type="Success" name="WACExpressAdd_Participant.ascx" path="E:\Projects\WACDB\WACExpressAdd_Participant.ascx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\WACHelp.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\WACHelp.aspx" />
+  <event action="Analyze" type="Success" name="WACHelp.aspx" path="E:\Projects\WACDB\WACHelp.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\WACLists.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\WACLists.aspx" />
+  <event action="Analyze" type="Success" name="WACLists.aspx" path="E:\Projects\WACDB\WACLists.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\WACMaintenance.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\WACMaintenance.aspx" />
+  <event action="Analyze" type="Success" name="WACMaintenance.aspx" path="E:\Projects\WACDB\WACMaintenance.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\WACSiteUnavailable.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\WACSiteUnavailable.aspx" />
+  <event action="Analyze" type="Success" name="WACSiteUnavailable.aspx" path="E:\Projects\WACDB\WACSiteUnavailable.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\WACTest.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\WACTest.aspx" />
+  <event action="Analyze" type="Success" name="WACTest.aspx" path="E:\Projects\WACDB\WACTest.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\Projects\WACDB\WACVenues.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\Projects\WACDB\WACVenues.aspx" />
+  <event action="Analyze" type="Success" name="WACVenues.aspx" path="E:\Projects\WACDB\WACVenues.aspx" />
+  <event action="Analyze" type="Success" name="Assembly References" path="E:\Projects\WACDB\web.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="E:\Projects\WACDB\web.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="E:\Projects\WACDB\web.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="E:\Projects\WACDB\web.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="E:\Projects\WACDB\web.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="E:\Projects\WACDB\web.config" />
+  <event action="Analyze" type="Success" name="web.config" path="E:\Projects\WACDB\web.config" />
+  <event action="Analyze" type="Success" name="E:\...\WACDB\" path="E:\Projects\WACDB" />
+  <event action="Analyze" type="Success" name="WACDB" path="E:\Projects\WACDB\WACDB.sln" />
+</log>

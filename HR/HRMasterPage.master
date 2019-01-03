@@ -1,0 +1,109 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="~/HR/HRMasterPage.master.cs" Inherits="HR_HRMasterPage" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajtk" %>
+<%@ Register src="~/UserControls/UC_Advisory.ascx" tagname="UC_Advisory" tagprefix="uc1" %>
+<%@ Register src="~/UserControls/UC_Explanation.ascx" tagname="UC_Explanation" tagprefix="uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Watershed Agricultural Council - FAME</title>
+    <asp:ContentPlaceHolder ID="MasterHead" runat="server">
+    </asp:ContentPlaceHolder>
+ <%--   <link href="<%=Request.ApplicationPath%>/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="<%=Request.ApplicationPath%>/calendar.css" rel="stylesheet" type="text/css" />--%>
+</head>
+<body onmousemove="SetProgressPosition(event)">
+    <form id="form1" runat="server">
+     <asp:ScriptManager ID="ScriptManager" EnablePartialRendering="true" runat="server" />
+    <telerik:RadWindowManager RenderMode="Lightweight" ID="WacRadWindowManager" runat="server" EnableShadow="true" Skin="Office2007" 
+        Style="z-index: 90001 !important" />
+    <div>
+        <div id="divHeader">
+            <div class="divHeaderClass">
+                <span class="spanHeaderLinks">
+                    <asp:Panel ID="pnlHeader" runat="server">
+                        <div>
+                            <a class="aHeaderLinksBig" href="<%=ResolveUrl("~/Ag/WACAgriculture.aspx") %>" >Home</a> | 
+                          
+                            <asp:Hyperlink ID="hypReports" runat="server" Text="Reports" CssClass="aHeaderLinksBig" Target="_blank"></asp:Hyperlink> | 
+                            <a class="aHeaderLinksBig" href="<%=ResolveUrl("~/Participant/WACPT_ContactInfoPage.aspx") %>">Contact Information</a> | 
+                            <a class="aHeaderLinksBig" href="<%=ResolveUrl("~/WACHelp.aspx") %>" >Help</a> | 
+                            <asp:LinkButton ID="lbLogout" runat="server" Text="Logout" OnClick="lbLogout_Click" CssClass="aHeaderLinksBig"></asp:LinkButton>
+                        </div>
+                        <div style="margin-top:10px;">
+                            <a class="aHeaderLinks" href="<%=ResolveUrl("~/WACLists.aspx") %>">Lists</a> | 
+                            <a class="aHeaderLinks" href="<%=ResolveUrl("~/Participant/WACPT_Organizations.aspx") %>" >Organizations</a> | 
+                            <a class="aHeaderLinks" href="<%=ResolveUrl("~/Participant/WACPT_Participants.aspx") %>" >Participants</a> | 
+                            <a class="aHeaderLinks" href="<%=ResolveUrl("~/Property/WACPR_Property.aspx") %>" >>Property</a> | 
+                            <a class="aHeaderLinks" href="<%=ResolveUrl("~/Property/WACPR_TaxParcelPage.aspx") %>" >Tax Parcels</a> | 
+                            <a class="aHeaderLinks" href="<%=ResolveUrl("~/WACVenues.aspx") %>" >Venues</a>
+                        </div>
+                    </asp:Panel>
+                </span>
+            </div>
+        </div>
+       <div id="divTabs">
+            <div class="divTabsClass">
+              <asp:Panel ID="pnlTabs" runat="server">
+                  <div style="float:left; color:White; margin-top:7px;"><asp:Label ID="lblUser" runat="server"></asp:Label></div>                 
+                  <div class="divTab"><a class="aTabs" href="<%=ResolveUrl("~/AG/WACAgriculture.aspx") %>" >Agriculture </a>  </div>
+                  <div class="divTab"><a class="aTabs" href="http://potok.wac.local/wac_fameapp/publish.htm" target="_blank"> Document Uploader Application </a> | </div>             
+                  <div style="clear:both;"></div>
+              </asp:Panel>
+            </div>
+        </div>
+        <div id="divTabSelected">&nbsp;</div>
+        <asp:Panel ID="pnlGlobalMessage" runat="server" Visible="false">
+            <div id="divGlobalMessage" class="fsM B I cWhite"><marquee><asp:Label ID="lblGlobalMessage" runat="server"></asp:Label></marquee></div>
+        </asp:Panel>
+        <div class="divContentClass">
+        <div style="background-image: url(../images/farm_o.jpg); background-repeat: no-repeat;
+        min-height: 250px;">
+        <div style="padding: 5px;">
+            <div>
+                <div style="float: left;" class="fsXL B">
+                    Human Resources</div>
+                <div style="float: right;" class="B">
+                    <asp:HyperLink ID="hlParticipant_Help" runat="server" Target="_blank"></asp:HyperLink></div>
+                <div style="clear: both;">
+                </div>
+            </div>
+            <uc1:uc_explanation id="UC_Explanation1" runat="server" />
+            <uc1:uc_advisory id="UC_Advisory1" runat="server" />
+            <hr />
+            <asp:ContentPlaceHolder ID="HRFilters" runat="server" />
+            <asp:ContentPlaceHolder ID="HRMaster" runat="server" />
+            <asp:ContentPlaceHolder ID="HRDetail" runat="server" />
+        </div>
+    </div>
+</div>
+ <div id="divFooter"><br /><hr style="width:96%;" />&copy; Copyright 2017 <a href="http://www.nycwatershed.org">Watershed Agricultural Council</a>. All rights reserved.<br /><br /></div>
+    </div>
+    </form>
+</body>
+</html>
+
+ <script type="text/javascript">
+        function SetProgressPosition(e) {
+            var posx = 0;
+            var posy = 0;
+            if (!e) var e = window.event;
+            if (e.pageX || e.pageY) {
+                posx = e.pageX;
+                posy = e.pageY;
+            }
+            else if (e.clientX || e.clientY) {
+                posx = e.clientX + document.documentElement.scrollLeft;
+                posy = e.clientY + document.documentElement.scrollTop;
+            }
+            document.getElementById('divProgress').style.left = posx - 8 + "px";
+            document.getElementById('divProgress').style.top = posy - 8 + "px";
+        }
+        //function CancelPostBack() {
+        //    var objMan = Sys.WebForms.PageRequestManager.getInstance();
+        //    if (objMan.get_isInAsyncPostBack())
+        //        objMan.abortPostBack();
+        //}
+    </script>

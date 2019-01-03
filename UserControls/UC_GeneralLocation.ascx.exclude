@@ -1,0 +1,13 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="~/UserControls/UC_GeneralLocation.ascx.cs" Inherits="UC_GeneralLocation" %>
+<div>
+    <asp:Panel ID="pnlCountyTownship" runat="server">
+        <div style="padding:3px;">
+            NY County: <asp:DropDownList ID="ddlCounty" runat="server" OnSelectedIndexChanged="ddlCounty_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>&nbsp;<asp:Label ID="lblTownship" runat="server" Text="NY Township:"></asp:Label> <asp:DropDownList ID="ddlTownship" runat="server"></asp:DropDownList>
+        </div>
+    </asp:Panel>
+    <asp:Panel ID="pnlBasinSubbasin" runat="server">
+        <div style="padding:3px;">
+            Basin: <asp:DropDownList ID="ddlBasin" runat="server" OnSelectedIndexChanged="ddlBasin_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>&nbsp;<asp:Label ID="lblSubbasin" runat="server" Text="Subbasin:"></asp:Label> <asp:DropDownList ID="ddlSubbasin" runat="server"></asp:DropDownList>
+        </div>
+    </asp:Panel>
+</div>

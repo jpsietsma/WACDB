@@ -1,0 +1,389 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class UC_Express_Property : System.Web.UI.UserControl
+{
+    #region Page Load Events
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+
+    public void LoadFormView_Property(int iPK_Property)
+    {
+        try
+        {
+            fvProperty.ChangeMode(FormViewMode.ReadOnly);
+            if (iPK_Property == -1) fvProperty.ChangeMode(FormViewMode.Insert);
+            BindProperty(iPK_Property);
+            mpeExpress_Property.Show();
+            upExpress_Property.Update();
+        }
+        catch { WACAlert.Show("The property is disassociated and the express property window is not available.", 0); }
+    }
+
+    #endregion
+
+    #region Event Handling
+
+    protected void lbExpress_Property_Close_Click(object sender, EventArgs e)
+    {
+        hfPropertyPK.Value = "";
+        Page.GetType().InvokeMember("InvokedMethod_SectionPage_RebindRecord", System.Reflection.BindingFlags.InvokeMethod, null, this.Page, null);
+        mpeExpress_Property.Hide();
+    }
+
+    protected void lbExpress_Property_Add_Click(object sender, EventArgs e)
+    {
+        fvProperty.ChangeMode(FormViewMode.Insert);
+        BindProperty(-1);
+    }
+
+    protected void ddlState_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        DropDownList ddl = (DropDownList)sender;
+        Label lblCity = fvProperty.FindControl("lblCity") as Label;
+        DropDownList ddlCountyNY = fvProperty.FindControl("UC_GeneralLocation_UpdateProperty").FindControl("ddlCounty") as DropDownList;
+        DropDownList ddlTownshipNY = fvProperty.FindControl("UC_GeneralLocation_UpdateProperty").FindControl("ddlTownship") as DropDownList;
+        DropDownList ddlBasin = fvProperty.FindControl("UC_GeneralLocation_UpdateProperty").FindControl("ddlBasin") as DropDownList;
+        DropDownList ddlSubbasin = fvProperty.FindControl("UC_GeneralLocation_UpdateProperty").FindControl("ddlSubbasin") as DropDownList;
+
+        WACGlobal_Methods.PopulateControl_DatabaseLists_Zipcode_DDL(fvProperty, "ddlZip", null, ddl.SelectedValue);
+
+        if (ddl.SelectedValue == "NY")
+        {
+            WACGlobal_Methods.PopulateControl_DatabaseLists_CountyNY_DDL(ddlCountyNY, false, null);
+            ddlTownshipNY.Items.Clear();
+            ddlBasin.Items.Clear();
+            ddlSubbasin.Items.Clear();
+        }
+        else
+        {
+            ddlCountyNY.Items.Clear();
+            ddlTownshipNY.Items.Clear();
+            ddlBasin.Items.Clear();
+            ddlSubbasin.Items.Clear();
+        }
+
+        if (lblCity != null) lblCity.Text = "";
+    }
+
+    protected void ddlZip_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        DropDownList ddl = (DropDownList)sender;
+        DropDownList ddlState = fvProperty.FindControl("ddlState") as DropDownList;
+        DropDownList ddlCountyNY = fvProperty.FindControl("UC_GeneralLocation_UpdateProperty").FindControl("ddlCounty") as DropDownList;
+        DropDownList ddlTownshipNY = fvProperty.FindControl("UC_GeneralLocation_UpdateProperty").FindControl("ddlTownship") as DropDownList;
+        DropDownList ddlBasin = fvProperty.FindControl("UC_GeneralLocation_UpdateProperty").FindControl("ddlBasin") as DropDownList;
+        DropDownList ddlSubbasin = fvProperty.FindControl("UC_GeneralLocation_UpdateProperty").FindControl("ddlSubbasin") as DropDownList;
+        Label lbl = fvProperty.FindControl("lblCity") as Label;
+        using (WACDataClassesDataContext wDataContext = new WACDataClassesDataContext())
+        {
+            var a = (from b in wDataContext.zipcodes.Where(w => w.pk_zipcode == ddl.SelectedValue) select b).Single();
+            if (ddlState.SelectedValue.ToUpper() == "NY")
+            {
+                try
+                {
+                    var c = wDataContext.list_countyNies.Where(w => w.county == a.county).Select(s => s.pk_list_countyNY);
+                    if (c.Count() == 1)
+                    {
+                        WACGlobal_Methods.PopulateControl_DatabaseLists_CountyNY_DDL(ddlCountyNY, false, c.Single());
+                        WACGlobal_Methods.PopulateControl_DatabaseLists_TownshipNY_DDL(ddlTownshipNY, c.Single(), null);
+                        WACGlobal_Methods.PopulateControl_DatabaseLists_Basin_DDL(ddlBasin, null, null, null, c.Single(), null, true);
+                        ddlSubbasin.Items.Clear();
+                    }
+                    else
+                    {
+                        WACGlobal_Methods.PopulateControl_DatabaseLists_CountyNY_DDL(ddlCountyNY, false, null);
+                        ddlTownshipNY.Items.Clear();
+                        ddlBasin.Items.Clear();
+                        ddlSubbasin.Items.Clear();
+                    }
+                }
+                catch
+                {
+                    ddlCountyNY.SelectedIndex = 0;
+                    ddlTownshipNY.Items.Clear();
+                    ddlBasin.Items.Clear();
+                    ddlSubbasin.Items.Clear();
+                    lbl.Text = "";
+                }
+            }
+            else
+            {
+                ddlCountyNY.Items.Clear();
+                ddlTownshipNY.Items.Clear();
+                ddlBasin.Items.Clear();
+                ddlSubbasin.Items.Clear();
+            }
+            lbl.Text = a.city;
+        }
+    }
+
+    protected void fvProperty_ModeChanging(object sender, FormViewModeEventArgs e)
+    {
+        try
+        {
+            fvProperty.ChangeMode(e.NewMode);
+            if (!string.IsNullOrEmpty(hfPropertyPK.Value)) BindProperty(Convert.ToInt32(hfPropertyPK.Value));
+            else lbExpress_Property_Close_Click(null, null);
+        }
+        catch { }
+    }
+
+    protected void fvProperty_ItemUpdating(object sender, FormViewUpdateEventArgs e)
+    {
+        StringBuilder sb = new StringBuilder();
+
+        DropDownList ddlAddressType = fvProperty.FindControl("UC_ControlGroup_PropertyAddressType1").FindControl("ddlAddressType") as DropDownList;
+        TextBox tbNumber = fvProperty.FindControl("UC_ControlGroup_PropertyAddressType1").FindControl("tbNumber") as TextBox;
+        TextBox tbAddressBaseRD = fvProperty.FindControl("UC_ControlGroup_PropertyAddressType1").FindControl("tbAddressBaseRD") as TextBox;
+        TextBox tbAddressBaseRR = fvProperty.FindControl("UC_ControlGroup_PropertyAddressType1").FindControl("tbAddressBaseRR") as TextBox;
+        TextBox tbAddressBaseHC = fvProperty.FindControl("UC_ControlGroup_PropertyAddressType1").FindControl("tbAddressBaseHC") as TextBox;
+        TextBox tbAddressBaseSHWY = fvProperty.FindControl("UC_ControlGroup_PropertyAddressType1").FindControl("tbAddressBaseSHWY") as TextBox;
+        TextBox tbAddressBaseCRD = fvProperty.FindControl("UC_ControlGroup_PropertyAddressType1").FindControl("tbAddressBaseCRD") as TextBox;
+        DropDownList ddlAddressSuffix = fvProperty.FindControl("UC_ControlGroup_PropertyAddressType1").FindControl("ddlAddressSuffix") as DropDownList;
+        TextBox tbAddress2 = fvProperty.FindControl("tbAddress2") as TextBox;
+        DropDownList ddlAddress2Type = fvProperty.FindControl("ddlAddress2Type") as DropDownList;
+        DropDownList ddlState = fvProperty.FindControl("ddlState") as DropDownList;
+        DropDownList ddlZip = fvProperty.FindControl("ddlZip") as DropDownList;
+        Label lblCity = fvProperty.FindControl("lblCity") as Label;
+        TextBox tbZip4 = fvProperty.FindControl("tbZip4") as TextBox;
+        DropDownList ddlCountyNY = fvProperty.FindControl("UC_GeneralLocation_UpdateProperty").FindControl("ddlCounty") as DropDownList;
+        DropDownList ddlTownshipNY = fvProperty.FindControl("UC_GeneralLocation_UpdateProperty").FindControl("ddlTownship") as DropDownList;
+        DropDownList ddlBasin = fvProperty.FindControl("UC_GeneralLocation_UpdateProperty").FindControl("ddlBasin") as DropDownList;
+        DropDownList ddlSubbasin = fvProperty.FindControl("UC_GeneralLocation_UpdateProperty").FindControl("ddlSubbasin") as DropDownList;
+
+        using (WACDataClassesDataContext wDataContext = new WACDataClassesDataContext())
+        {
+            try
+            {
+                var a = wDataContext.properties.Where(w => w.pk_property == Convert.ToInt32(fvProperty.DataKey.Value)).Select(s => s).Single();
+
+                a.fk_addressType_code = ddlAddressType.SelectedValue;
+
+                if (!string.IsNullOrEmpty(tbNumber.Text)) a.nbr = WACGlobal_Methods.Format_Global_StringLengthRestriction(tbNumber.Text, 36).Trim();
+                else sb.Append("Number was not updated. " + ddlAddressType.SelectedItem.Text + " requires a Number. ");
+
+                if (!string.IsNullOrEmpty(ddlAddressSuffix.SelectedValue) && ddlAddressType.SelectedValue == "RD") a.fk_usps_abbr = ddlAddressSuffix.SelectedValue;
+                else a.fk_usps_abbr = null;
+
+                if (ddlAddressType.SelectedValue == "RD")
+                {
+                    if (!string.IsNullOrEmpty(tbAddressBaseRD.Text)) a.address_base = WACGlobal_Methods.Format_Global_StringLengthRestriction(tbAddressBaseRD.Text, 48).Trim();
+                    else sb.Append("Road Name was not updated. Road Name is required. ");
+                }
+                if (ddlAddressType.SelectedValue == "RR")
+                {
+                    if (!string.IsNullOrEmpty(tbAddressBaseRR.Text)) a.address_base = WACGlobal_Methods.Format_Global_StringLengthRestriction(tbAddressBaseRR.Text, 48).Trim();
+                    else sb.Append("Rural Route was not updated. Rural Route is required. ");
+                }
+                if (ddlAddressType.SelectedValue == "HC")
+                {
+                    if (!string.IsNullOrEmpty(tbAddressBaseHC.Text)) a.address_base = WACGlobal_Methods.Format_Global_StringLengthRestriction(tbAddressBaseHC.Text, 48).Trim();
+                    else sb.Append("Highway Contract Route was not updated. Highway Contract Route is required. ");
+                }
+                if (ddlAddressType.SelectedValue == "SHWY")
+                {
+                    if (!string.IsNullOrEmpty(tbAddressBaseSHWY.Text)) a.address_base = WACGlobal_Methods.Format_Global_StringLengthRestriction(tbAddressBaseSHWY.Text, 48).Trim();
+                    else sb.Append("State Highway was not updated. State Highway is required. ");
+                }
+                if (ddlAddressType.SelectedValue == "CRD")
+                {
+                    if (!string.IsNullOrEmpty(tbAddressBaseCRD.Text)) a.address_base = WACGlobal_Methods.Format_Global_StringLengthRestriction(tbAddressBaseCRD.Text, 48).Trim();
+                    else sb.Append("County Road was not updated. County Road is required. ");
+                }
+
+                a.address2 = WACGlobal_Methods.Format_Global_StringLengthRestriction(tbAddress2.Text, 48).Trim();
+
+                if (!string.IsNullOrEmpty(ddlAddress2Type.SelectedValue)) a.fk_address2Type_code = ddlAddress2Type.SelectedValue;
+                else a.fk_address2Type_code = null;
+
+                a.city = WACGlobal_Methods.Format_Global_StringLengthRestriction(lblCity.Text, 48).Trim();
+
+                if (!string.IsNullOrEmpty(ddlState.SelectedValue)) a.state = ddlState.SelectedValue;
+                else a.state = null;
+
+                if (!string.IsNullOrEmpty(ddlZip.SelectedValue)) a.fk_zipcode = ddlZip.SelectedValue;
+                else a.fk_zipcode = null;
+
+                a.zip4 = WACGlobal_Methods.Format_Global_StringLengthRestriction(tbZip4.Text, 4).Trim();
+
+                if (!string.IsNullOrEmpty(ddlCountyNY.SelectedValue)) a.fk_list_countyNY = Convert.ToInt32(ddlCountyNY.SelectedValue);
+                else a.fk_list_countyNY = null;
+
+                if (!string.IsNullOrEmpty(ddlTownshipNY.SelectedValue)) a.fk_list_townshipNY = Convert.ToInt32(ddlTownshipNY.SelectedValue);
+                else a.fk_list_townshipNY = null;
+
+                if (!string.IsNullOrEmpty(ddlBasin.SelectedValue)) a.fk_basin_code = ddlBasin.SelectedValue;
+                else a.fk_basin_code = null;
+
+                if (!string.IsNullOrEmpty(ddlSubbasin.SelectedValue)) a.fk_subbasin_code = ddlSubbasin.SelectedValue;
+                else a.fk_subbasin_code = null;
+
+                a.modified = DateTime.Now;
+                a.modified_by = Session["userName"].ToString();
+
+                wDataContext.SubmitChanges();
+                fvProperty.ChangeMode(FormViewMode.ReadOnly);
+                BindProperty(Convert.ToInt32(fvProperty.DataKey.Value));
+
+                if (!string.IsNullOrEmpty(sb.ToString())) WACAlert.Show(sb.ToString(), 0);
+            }
+            catch (Exception ex) { WACAlert.Show(ex.Message, 0); }
+        }
+    }
+
+    //protected void fvProperty_ItemInserting(object sender, FormViewInsertEventArgs e)
+    //{
+    //    int? i = null;
+    //    int iCode = 0;
+
+    //    DropDownList ddlAddressType = fvProperty.FindControl("UC_ControlGroup_PropertyAddressType1").FindControl("ddlAddressType") as DropDownList;
+    //    TextBox tbNumber = fvProperty.FindControl("UC_ControlGroup_PropertyAddressType1").FindControl("tbNumber") as TextBox;
+    //    TextBox tbAddressBaseRD = fvProperty.FindControl("UC_ControlGroup_PropertyAddressType1").FindControl("tbAddressBaseRD") as TextBox;
+    //    TextBox tbAddressBaseRR = fvProperty.FindControl("UC_ControlGroup_PropertyAddressType1").FindControl("tbAddressBaseRR") as TextBox;
+    //    TextBox tbAddressBaseHC = fvProperty.FindControl("UC_ControlGroup_PropertyAddressType1").FindControl("tbAddressBaseHC") as TextBox;
+    //    TextBox tbAddressBaseSHWY = fvProperty.FindControl("UC_ControlGroup_PropertyAddressType1").FindControl("tbAddressBaseSHWY") as TextBox;
+    //    TextBox tbAddressBaseCRD = fvProperty.FindControl("UC_ControlGroup_PropertyAddressType1").FindControl("tbAddressBaseCRD") as TextBox;
+    //    DropDownList ddlAddressSuffix = fvProperty.FindControl("UC_ControlGroup_PropertyAddressType1").FindControl("ddlAddressSuffix") as DropDownList;
+    //    DropDownList ddlZip = fvProperty.FindControl("ddlZip") as DropDownList;
+
+    //    StringBuilder sb = new StringBuilder();
+
+        
+    //    using (WACDataClassesDataContext wDataContext = new WACDataClassesDataContext())
+    //    {
+    //        try
+    //        {
+    //            string sAddressType = ddlAddressType.SelectedValue;
+
+    //            string sNumber = null;
+    //            if (!string.IsNullOrEmpty(tbNumber.Text)) sNumber = WACGlobal_Methods.Format_Global_StringLengthRestriction(tbNumber.Text, 36).Trim();
+    //            else sb.Append(ddlAddressType.SelectedItem.Text + " requires a Number. ");
+
+    //            string sAddressBase = null;
+    //            if (ddlAddressType.SelectedValue == "RD")
+    //            {
+    //                if (!string.IsNullOrEmpty(tbAddressBaseRD.Text)) sAddressBase = WACGlobal_Methods.Format_Global_StringLengthRestriction(tbAddressBaseRD.Text, 48).Trim();
+    //                else sb.Append("Road Name is required. ");
+    //            }
+    //            if (ddlAddressType.SelectedValue == "RR")
+    //            {
+    //                if (!string.IsNullOrEmpty(tbAddressBaseRR.Text)) sAddressBase = WACGlobal_Methods.Format_Global_StringLengthRestriction(tbAddressBaseRR.Text, 48).Trim();
+    //                else sb.Append("Rural Route is required. ");
+    //            }
+    //            if (ddlAddressType.SelectedValue == "HC")
+    //            {
+    //                if (!string.IsNullOrEmpty(tbAddressBaseHC.Text)) sAddressBase = WACGlobal_Methods.Format_Global_StringLengthRestriction(tbAddressBaseHC.Text, 48).Trim();
+    //                else sb.Append("Highway Contract Route is required. ");
+    //            }
+    //            if (ddlAddressType.SelectedValue == "SHWY")
+    //            {
+    //                if (!string.IsNullOrEmpty(tbAddressBaseSHWY.Text)) sAddressBase = WACGlobal_Methods.Format_Global_StringLengthRestriction(tbAddressBaseSHWY.Text, 48).Trim();
+    //                else sb.Append("State Highway is required. ");
+    //            }
+    //            if (ddlAddressType.SelectedValue == "CRD")
+    //            {
+    //                if (!string.IsNullOrEmpty(tbAddressBaseCRD.Text)) sAddressBase = WACGlobal_Methods.Format_Global_StringLengthRestriction(tbAddressBaseCRD.Text, 48).Trim();
+    //                else sb.Append("County Road is required. ");
+    //            }
+
+    //            string sAddressSuffix = null;
+    //            if (!string.IsNullOrEmpty(ddlAddressSuffix.SelectedValue) && ddlAddressType.SelectedValue == "RD") sAddressSuffix = ddlAddressSuffix.SelectedValue;
+
+    //            string sZip = null;
+    //            if (!string.IsNullOrEmpty(ddlZip.SelectedValue)) sZip = ddlZip.SelectedValue;
+    //            else sb.Append("Zip Code is required. ");
+
+    //            if (string.IsNullOrEmpty(sb.ToString()))
+    //            {
+    //                iCode = wDataContext.property_add_express(sNumber, sAddressBase, sAddressSuffix, sAddressType, sZip, Session["userName"].ToString(), ref i);
+    //                if (iCode == 0)
+    //                {
+    //                    fvProperty.ChangeMode(FormViewMode.ReadOnly);
+    //                    BindProperty(Convert.ToInt32(i));
+    //                }
+    //                else WACAlert.Show("Error Returned from Database.", iCode);
+    //            }
+    //            else WACAlert.Show(sb.ToString(), 0);
+    //        }
+    //        catch (Exception ex) { WACAlert.Show("Error: " + ex.Message, 0); }
+    //    }
+    //}
+
+    #endregion
+
+    #region Data Binding
+
+    public void BindProperty(int i)
+    {
+        using (WACDataClassesDataContext wDataContext = new WACDataClassesDataContext())
+        {
+            var a = wDataContext.properties.Where(w => w.pk_property == i).Select(s => s);
+            fvProperty.DataKeyNames = new string[] { "pk_property" };
+            fvProperty.DataSource = a;
+            fvProperty.DataBind();
+
+            if (fvProperty.CurrentMode != FormViewMode.Insert)
+            {
+                hfPropertyPK.Value = a.Single().pk_property.ToString();
+            }
+
+            if (fvProperty.CurrentMode == FormViewMode.Insert)
+            {
+                UC_ControlGroup_PropertyAddressType UC_ControlGroup_PropertyAddressType1 = fvProperty.FindControl("UC_ControlGroup_PropertyAddressType1") as UC_ControlGroup_PropertyAddressType;
+                WACGlobal_Methods.PopulateControl_DatabaseLists_AddressType_DDL(UC_ControlGroup_PropertyAddressType1.FindControl("ddlAddressType") as DropDownList, "RD", false);
+                WACGlobal_Methods.PopulateControl_DatabaseLists_USPS_Abbr_DDL(UC_ControlGroup_PropertyAddressType1.FindControl("ddlAddressSuffix") as DropDownList, null, true, true);
+                //UC_ControlGroup_PropertyAddressType1.PropertyAddressType_HandlePanels("RD");
+
+                WACGlobal_Methods.PopulateControl_DatabaseLists_StatesUS_DDL(fvProperty, "ddlState", "NY");
+                WACGlobal_Methods.PopulateControl_DatabaseLists_Zipcode_DDL(fvProperty, "ddlZip", null, "NY");
+            }
+
+            if (fvProperty.CurrentMode == FormViewMode.Edit)
+            {
+                UC_ControlGroup_PropertyAddressType UC_ControlGroup_PropertyAddressType1 = fvProperty.FindControl("UC_ControlGroup_PropertyAddressType1") as UC_ControlGroup_PropertyAddressType;
+                WACGlobal_Methods.PopulateControl_DatabaseLists_AddressType_DDL(UC_ControlGroup_PropertyAddressType1.FindControl("ddlAddressType") as DropDownList, a.Single().fk_addressType_code, false);
+                WACGlobal_Methods.PopulateControl_DatabaseLists_USPS_Abbr_DDL(UC_ControlGroup_PropertyAddressType1.FindControl("ddlAddressSuffix") as DropDownList, a.Single().fk_usps_abbr, true, true);
+                //UC_ControlGroup_PropertyAddressType1.PropertyAddressType_HandlePanels(a.Single().fk_addressType_code);
+
+                WACGlobal_Methods.PopulateControl_DatabaseLists_Address2Type_DDL(fvProperty, "ddlAddress2Type", a.Single().fk_address2Type_code);
+                WACGlobal_Methods.PopulateControl_DatabaseLists_StatesUS_DDL(fvProperty, "ddlState", a.Single().state);
+                WACGlobal_Methods.PopulateControl_DatabaseLists_Zipcode_DDL(fvProperty, "ddlZip", a.Single().fk_zipcode, a.Single().state);
+
+                WACGlobal_Methods.PopulateControl_DatabaseLists_CountyNY_DDL(fvProperty.FindControl("UC_GeneralLocation_UpdateProperty").FindControl("ddlCounty") as DropDownList, false, a.Single().fk_list_countyNY);
+                if (a.Single().fk_list_countyNY != null)
+                {
+                    WACGlobal_Methods.PopulateControl_DatabaseLists_TownshipNY_DDL(fvProperty.FindControl("UC_GeneralLocation_UpdateProperty").FindControl("ddlTownship") as DropDownList, a.Single().fk_list_countyNY, a.Single().fk_list_townshipNY);
+                    WACGlobal_Methods.PopulateControl_DatabaseLists_Basin_DDL(fvProperty.FindControl("UC_GeneralLocation_UpdateProperty").FindControl("ddlBasin") as DropDownList, null, null, null, a.Single().fk_list_countyNY, a.Single().fk_basin_code, true);
+                    if (!string.IsNullOrEmpty(a.Single().fk_basin_code)) WACGlobal_Methods.PopulateControl_DatabaseLists_Subbasin_DDL(fvProperty.FindControl("UC_GeneralLocation_UpdateProperty").FindControl("ddlSubbasin") as DropDownList, a.Single().fk_basin_code, a.Single().fk_subbasin_code);
+                }
+            }
+        }
+    }
+
+    #endregion
+
+    #region Global Insert
+
+    protected void lbGlobal_Insert_Close_Click(object sender, EventArgs e)
+    {
+        UC_Express_Global_Insert1.HideGlobal_Insert_Panels(true);
+        pnlGlobalInsert.Visible = false;
+        BindProperty(Convert.ToInt32(hfPropertyPK.Value));
+    }
+
+    protected void btnExpress_GlobalInsert_Click(object sender, EventArgs e)
+    {
+        pnlGlobalInsert.Visible = true;
+    }
+
+    #endregion
+}

@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="WacTest" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=JOHN-WAC\SQLEXPRESS;Initial Catalog=WacTest;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework" SettingsObjectName="ConsoleSandbox.Properties.Settings" SettingsPropertyName="wacConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.bmp_ag" Member="bmp_ags">
+    <Type Name="bmp_ag">
+      <Column Name="pk_bmp_ag" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fk_farmBusiness" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fk_pollutant_category_code" Type="System.String" DbType="NVarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="bmp_nbr" Type="System.String" DbType="NVarChar(24)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="lifespan_year" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="fk_bmpPractice_code" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="location" Type="System.String" DbType="NVarChar(96)" CanBeNull="true" />
+      <Column Name="units_planned" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="fk_unit_code" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="est_plan_prior" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="est_plan_rev" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="component_nbr_legacy" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="flood_2006" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="fk_bmpStatus2006_code" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="fk_farmBusiness_implementation_transferred_from" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QualifierVersion" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="fk_procurementType_code" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="bid_nbr_legacy" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="design_cost" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="final_modifications_cost" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="final_cost" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="fk_statusBMP_code" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="fk_list_designerEngineer_engineer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fk_list_designerEngineer_planner" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fk_agency_code_tech" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="fk_revisionDescription_code" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="revisionDescription_addl" Type="System.String" DbType="NVarChar(48)" CanBeNull="true" />
+      <Column Name="created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="created_by" Type="System.String" DbType="NVarChar(36)" CanBeNull="true" />
+      <Column Name="bmp_id_new_legacy" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="CREP" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="includeOnWFP2" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="fk_farmBusiness_implementation_transferred_to" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fk_list_designerEngineer_certifier" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fk_list_designerEngineer_inspector" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="modified" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="modified_by" Type="System.String" DbType="NVarChar(36)" CanBeNull="true" />
+      <Column Name="fk_form_wfp2_version" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="supplementalAttachmentWFP2" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="wac_appr_amt_orig_legacy" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="completed_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AWEP" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="EQIP" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ABC" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="validForABCCalc" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="dimensions" Type="System.String" DbType="NVarChar(48)" CanBeNull="true" />
+      <Column Name="unit_est_planned_ro" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="fk_programmaticRecord_code" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="landowner_contribution" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="fk_BMPSource_code" Type="System.String" DbType="NVarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="units_completed" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="fk_SAAssignType_code" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="fk_supplementalAgreementTaxParcel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="description_short" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="fk_bmp_ag_ancestor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fk_bmp_ag_transferredTo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fk_bmp_ag_transferredFrom" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SAStr_ro" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SATPStr_ro" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="units_designed" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="dimensions_designed" Type="System.String" DbType="NVarChar(48)" CanBeNull="true" />
+      <Column Name="fk_BMPSortGroup_code" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="issueStatement_wfp2" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="fk_BMPCode_code" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="fk_BMPCREPH20_code" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="fk_bmp_ag_subIssueHeader" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NMCP_yr" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="TaxParcels" Type="System.String" DbType="NChar(500)" CanBeNull="true" />
+      <Column Name="fk_farmBusinessWLProject" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Bmp" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CompositBmpNum" Type="System.String" DbType="NVarChar(24)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="bmp_ag_bmp_ag" Member="bmp_ag2" ThisKey="pk_bmp_ag" OtherKey="pk_bmp_ag" Type="bmp_ag" Cardinality="One" />
+      <Association Name="bmp_ag_bmp_ag1" Member="bmp_ags" ThisKey="pk_bmp_ag" OtherKey="fk_bmp_ag_ancestor" Type="bmp_ag" />
+      <Association Name="bmp_ag_bmp_ag2" Member="bmp_ags1" ThisKey="pk_bmp_ag" OtherKey="fk_bmp_ag_subIssueHeader" Type="bmp_ag" />
+      <Association Name="bmp_ag_bmp_ag3" Member="bmp_ags2" ThisKey="pk_bmp_ag" OtherKey="fk_bmp_ag_transferredFrom" Type="bmp_ag" />
+      <Association Name="bmp_ag_bmp_ag4" Member="bmp_ags3" ThisKey="pk_bmp_ag" OtherKey="fk_bmp_ag_transferredTo" Type="bmp_ag" />
+      <Association Name="bmp_ag_bmp_ag" Member="bmp_ag1" ThisKey="pk_bmp_ag" OtherKey="pk_bmp_ag" Type="bmp_ag" IsForeignKey="true" />
+      <Association Name="bmp_ag_bmp_ag1" Member="bmp_ag3" ThisKey="fk_bmp_ag_ancestor" OtherKey="pk_bmp_ag" Type="bmp_ag" IsForeignKey="true" />
+      <Association Name="bmp_ag_bmp_ag2" Member="bmp_ag4" ThisKey="fk_bmp_ag_subIssueHeader" OtherKey="pk_bmp_ag" Type="bmp_ag" IsForeignKey="true" />
+      <Association Name="bmp_ag_bmp_ag3" Member="bmp_ag5" ThisKey="fk_bmp_ag_transferredFrom" OtherKey="pk_bmp_ag" Type="bmp_ag" IsForeignKey="true" />
+      <Association Name="bmp_ag_bmp_ag4" Member="bmp_ag6" ThisKey="fk_bmp_ag_transferredTo" OtherKey="pk_bmp_ag" Type="bmp_ag" IsForeignKey="true" />
+      <Association Name="list_BMPCode_bmp_ag" Member="list_BMPCode" ThisKey="fk_BMPCode_code" OtherKey="pk_BMPCode_code" Type="list_BMPCode" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.list_BMPCode" Member="list_BMPCodes">
+    <Type Name="list_BMPCode">
+      <Column Name="pk_BMPCode_code" Type="System.String" DbType="NVarChar(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="code" Type="System.String" DbType="NVarChar(24) NOT NULL" CanBeNull="false" />
+      <Column Name="priority" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="list_BMPCode_bmp_ag" Member="bmp_ags" ThisKey="pk_BMPCode_code" OtherKey="fk_BMPCode_code" Type="bmp_ag" />
+    </Type>
+  </Table>
+  <Function Name="Ag.FarmNMCPAwardHistory" Method="FarmNMCPAwardHistory">
+    <Parameter Name="fk_farmBusiness" Type="System.Int32" DbType="Int" />
+    <Parameter Name="lastCreditYear" Type="System.Int16" DbType="SmallInt" />
+    <ElementType Name="FarmNMCPAwardHistoryResult">
+      <Column Name="farmID" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="startingYear" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="nmcpBalYr1" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="nmcpBalYr2" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="nmcpBalYr3" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="nmcpBalYr4" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="nmcpBalYr5" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="nmcpBalYr6" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="nmcpBalYr7" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="nmcpBalYr8" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="award_total" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="fk_farmBusiness" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

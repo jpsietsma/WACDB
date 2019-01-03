@@ -1,0 +1,5 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="~/UserControls/UC_ControlGroup_TaxParcel.ascx.cs" Inherits="UC_ControlGroup_TaxParcel" %>
+<div style="margin-bottom:5px;"><span class="B">County:</span> <asp:DropDownList ID="ddlCounty" runat="server" OnSelectedIndexChanged="ddlCounty_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList></div>
+<div style="margin-bottom:5px;"><span class="B">Jurisdiction:</span> <asp:DropDownList ID="ddlJurisdiction" runat="server" OnSelectedIndexChanged="ddlJurisdiction_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList></div>
+<div><span class="B">Tax Parcel ID:</span> <asp:DropDownList ID="ddlTaxParcelID" runat="server" OnSelectedIndexChanged="ddlTaxParcelID_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList></div>
+<asp:LinkButton ID="lbAddTaxParcel" Text="Add Selected Tax Parcel" runat="server" OnClick="lbAddTaxParcel_Click"  ></asp:LinkButton>
